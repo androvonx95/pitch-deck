@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.58-Bit AI Pitch Deck</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap');
+
+:root {
+--bg-color: #0d0f12;
+--text-primary: #ffffff;
+--text-secondary: #94a3b8;
+--accent: #3b82f6;
+--accent-glow: rgba(59, 130, 246, 0.5);
+}
+
+body, html {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+font-family: 'Inter', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-primary);
+overflow: hidden;
+}
+
+.deck-container {
+position: relative;
+width: 100vw;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.slide {
+position: absolute;
+width: 80%;
+max-width: 1000px;
+opacity: 0;
+visibility: hidden;
+transform: translateY(20px);
+transition: all 0.5s ease-in-out;
+text-align: center;
+}
+
+.slide.active {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+/* Typography */
+h1 {
+font-size: 4rem;
+font-weight: 900;
+margin-bottom: 0.5rem;
+line-height: 1.1;
+}
+
+h2 {
+font-size: 3rem;
+font-weight: 700;
+margin-bottom: 1.5rem;
+color: var(--accent);
+}
+
+h3 {
+font-size: 1.8rem;
+font-weight: 500;
+color: var(--text-secondary);
+margin-bottom: 2rem;
+}
+
+p, li {
+font-size: 1.5rem;
+line-height: 1.6;
+color: var(--text-secondary);
+}
+
+ul {
+text-align: left;
+display: inline-block;
+margin-top: 1rem;
+}
+
+li {
+margin-bottom: 1rem;
+}
+
+/* Highlight text styling */
+.highlight {
+color: var(--accent);
+font-weight: bold;
+}
+
+.tagline {
+font-size: 2.5rem;
+font-weight: 700;
+background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin: 2rem 0;
+}
+
+/* Founder Info Box */
+.founder-box {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 1px solid #333;
+}
+
+.founder-name {
+font-size: 1.2rem;
+font-weight: bold;
+color: #fff;
+}
+
+.founder-title {
+font-size: 1rem;
+color: var(--text-secondary);
+}
+
+/* Grid for comparisons */
+.comparison-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.card {
+background: #1e293b;
+padding: 2rem;
+border-radius: 12px;
+border: 1px solid #334155;
+}
+
+.card h4 {
+font-size: 1.5rem;
+margin-top: 0;
+color: #fff;
+}
+
+/* Navigation Controls */
+.controls {
+position: absolute;
+bottom: 30px;
+right: 30px;
+display: flex;
+gap: 15px;
+z-index: 100;
+}
+
+button {
+background: transparent;
+border: 2px solid var(--text-secondary);
+color: var(--text-secondary);
+padding: 10px 20px;
+font-size: 1rem;
+font-weight: bold;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+button:hover {
+border-color: var(--accent);
+color: var(--accent);
+box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Progress Bar */
+.progress-container {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 4px;
+background: #1e293b;
+}
+
+.progress-bar {
+height: 100%;
+background: var(--accent);
+width: 0%;
+transition: width 0.3s ease;
+}
+</style>
+</head>
+<body>
+
+<div class="deck-container">
+
+<!-- Slide 1: Title -->
+<div class="slide active">
+<h1>Edge-Native Intelligence</h1>
+<div class="tagline">Smarter. Smaller. Faster.</div>
+<p>Bringing superhuman AI out of the cloud and into the physical world.</p>
+
+<div class="founder-box">
+<div class="founder-name">Karthik B.</div>
+<div class="founder-title">Founder & Lead Engineer</div>
+<div class="founder-title">B.Tech Computer Science and Engineering (IoT), Shiv Nadar University Chennai</div>
+</div>
+</div>
+
+<!-- Slide 2: The Problem -->
+<div class="slide">
+<h2>The Billion-Dollar Bottleneck</h2>
+<h3>Today's AI is trapped in the cloud.</h3>
+<ul>
+<li><strong>Massive Costs:</strong> Running AI requires renting millions of dollars in supercomputers.</li>
+<li><strong>Zero Privacy:</strong> User data must be beamed to remote servers for processing.</li>
+<li><strong>Energy Intensive:</strong> Current models consume staggering amounts of electricity, barring them from mobile and IoT deployment.</li>
+</ul>
+</div>
+
+<!-- Slide 3: The Solution -->
+<div class="slide">
+<h2>Our Breakthrough: 1.58-Bit AI</h2>
+<h3>We shrink the brain without losing the intelligence.</h3>
+<p>Using proprietary "knowledge distillation," we compress massive AI models down to a radically smaller mathematical footprint. It is the equivalent of taking a massive, uncompressed 4K video and turning it into a hyper-efficient streaming format—without losing clarity.</p>
+</div>
+
+<!-- Slide 4: The Core Promise -->
+<div class="slide">
+<h2>The Next Generation of AI</h2>
+<div class="tagline" style="font-size: 3.5rem; line-height: 1.2;">
+Smarter than we have ever seen before.<br>
+Smaller than we have ever seen before.<br>
+Faster than ever.
+</div>
+</div>
+
+<!-- Slide 5: The Comparison -->
+<div class="slide">
+<h2>Why This Changes Everything</h2>
+<div class="comparison-grid">
+<div class="card">
+<h4>Traditional AI</h4>
+<p>Requires expensive NVIDIA server clusters.</p>
+<p>High latency (waiting for cloud response).</p>
+<p>Massive energy drain.</p>
+</div>
+<div class="card" style="border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow);">
+<h4 style="color: var(--accent);">Our 1.58-Bit AI</h4>
+<p>Runs locally on phones, laptops, and IoT hardware.</p>
+<p>Zero latency (instant offline responses).</p>
+<p><strong>70x Reduction</strong> in power consumption.</p>
+</div>
+</div>
+</div>
+
+<!-- Slide 6: Traction -->
+<div class="slide">
+<h2>Proven Technology. Ready to Scale.</h2>
+<h3>The math works. The pipeline is built.</h3>
+<ul>
+<li><strong>Successfully Validated:</strong> Our proprietary "Attention-Transfer" algorithm has been successfully built and tested on NVIDIA A100 architectures.</li>
+<li><strong>Hardware Agnostic:</strong> Designed from the ground up by an IoT engineer to eventually deploy on custom silicon and microcontrollers.</li>
+<li><strong>Cost-Efficient Development:</strong> We achieve in hours what takes traditional labs weeks, drastically reducing our R&D burn rate.</li>
+</ul>
+</div>
+
+<!-- Slide 7: The Vision -->
+<div class="slide">
+<h2>The Scaling Roadmap</h2>
+<ul>
+<li><span class="highlight">Phase 1 (Current):</span> Distilling highly coherent 3-Billion parameter coding assistants for offline edge devices.</li>
+<li><span class="highlight">Phase 2:</span> Strategic deployment into physical IoT infrastructure, wearables, and local consumer hardware.</li>
+<li><span class="highlight">Phase 3:</span> Scaling our proprietary pipeline to 100B+ parameter open-source models, rivaling the intelligence of top-tier global AI labs, but running entirely on local consumer tech.</li>
+</ul>
+</div>
+
+<!-- Slide 8: The Ask -->
+<div class="slide">
+<h1>Join the Revolution.</h1>
+<h3>We are raising seed capital to secure compute clusters for our massive-scale distillation runs.</h3>
+<p>Let's put the most advanced AI the world has ever seen into the palm of everyone's hand.</p>
+</div>
+
+</div>
+
+<!-- Controls & Progress -->
+<div class="controls">
+<button onclick="prevSlide()">← Prev</button>
+<button onclick="nextSlide()">Next →</button>
+</div>
+
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const progressBar = document.getElementById('progressBar');
+
+function updateDeck() {
+slides.forEach((slide, index) => {
+if (index === currentSlide) {
+slide.classList.add('active');
+} else {
+slide.classList.remove('active');
+}
+});
+
+// Update Progress Bar
+const progress = ((currentSlide + 1) / slides.length) * 100;
+progressBar.style.width = progress + '%';
+}
+
+function nextSlide() {
+if (currentSlide < slides.length - 1) {
+currentSlide++;
+updateDeck();
+}
+}
+
+function prevSlide() {
+if (currentSlide > 0) {
+currentSlide--;
+updateDeck();
+}
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+if (e.key === 'ArrowRight' || e.key === 'Space') {
+nextSlide();
+} else if (e.key === 'ArrowLeft') {
+prevSlide();
+}
+});
+
+// Initialize progress bar
+updateDeck();
+</script>
+</body>
+</html>
+
+
+
+
+Sent from Proton Mail for Android.
