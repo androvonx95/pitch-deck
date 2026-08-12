@@ -1,408 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1.58-Bit AI Infrastructure Pitch Deck</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.58-Bit AI Infrastructure | LVL1 Pitch Deck</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
 
-:root {
---bg-color: #050505;
---text-primary: #ffffff;
---text-secondary: #a1a1aa;
---accent: #3b82f6; /* Shifted to an enterprise blue/purple gradient */
---accent-glow: rgba(59, 130, 246, 0.4);
---card-bg: #111111;
---card-border: #222222;
-}
+        :root {
+            --bg-color: #050505;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent: #3b82f6; 
+            --accent-glow: rgba(59, 130, 246, 0.4);
+            --card-bg: #111111;
+            --card-border: #222222;
+        }
 
-body, html {
-margin: 0;
-padding: 0;
-width: 100%;
-height: 100%;
-font-family: 'Inter', sans-serif;
-background-color: var(--bg-color);
-color: var(--text-primary);
-overflow: hidden;
-}
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            overflow: hidden;
+        }
 
-.deck-container {
-position: relative;
-width: 100vw;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 60%);
-}
+        .deck-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 60%);
+        }
 
-.slide {
-position: absolute;
-width: 85%;
-max-width: 1100px;
-opacity: 0;
-visibility: hidden;
-transform: scale(0.95) translateY(20px);
-transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-text-align: center;
-}
+        .slide {
+            position: absolute;
+            width: 85%;
+            max-width: 1100px;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.95) translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
 
-.slide.active {
-opacity: 1;
-visibility: visible;
-transform: scale(1) translateY(0);
-}
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(0);
+        }
 
-/* Typography */
-h1 {
-font-size: 4.5rem;
-font-weight: 900;
-margin-bottom: 0.5rem;
-line-height: 1.1;
-letter-spacing: -0.03em;
-}
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
 
-h2 {
-font-size: 3.2rem;
-font-weight: 800;
-margin-bottom: 1rem;
-color: var(--text-primary);
-letter-spacing: -0.02em;
-}
+        h2 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
 
-h3 {
-font-size: 1.8rem;
-font-weight: 400;
-color: var(--text-secondary);
-margin-bottom: 2.5rem;
-line-height: 1.4;
-}
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.4;
+        }
 
-p, li {
-font-size: 1.4rem;
-line-height: 1.6;
-color: var(--text-secondary);
-}
+        p, li {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
 
-.highlight {
-color: #60a5fa;
-font-weight: 600;
-}
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
 
-.tagline {
-font-size: 2.8rem;
-font-weight: 800;
-background: linear-gradient(90deg, #60a5fa, #c084fc);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-margin: 1.5rem 0;
-}
+        .tagline {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 1.5rem 0;
+        }
 
-.badge {
-display: inline-block;
-background: rgba(96, 165, 250, 0.1);
-color: #60a5fa;
-border: 1px solid #60a5fa;
-padding: 0.5rem 1rem;
-border-radius: 50px;
-font-weight: 800;
-font-size: 1.2rem;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 1.5rem;
-box-shadow: 0 0 15px var(--accent-glow);
-}
+        .badge {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+            border: 1px solid #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
 
-/* Founder Info Box */
-.founder-box {
-margin-top: 4rem;
-padding-top: 2rem;
-border-top: 1px solid var(--card-border);
-display: inline-block;
-text-align: center;
-}
+        .founder-box {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .founder-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .founder-title {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
 
-.founder-name {
-font-size: 1.3rem;
-font-weight: 600;
-color: #fff;
-}
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
 
-.founder-title {
-font-size: 1.1rem;
-color: var(--text-secondary);
-margin-top: 0.2rem;
-}
+        .metric-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
 
-/* Grids */
-.metrics-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1.5rem;
-margin-top: 2rem;
-text-align: left;
-}
+        .metric-card:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+        }
 
-.metric-card {
-background: var(--card-bg);
-padding: 2rem;
-border-radius: 16px;
-border: 1px solid var(--card-border);
-transition: transform 0.2s, border-color 0.2s;
-}
+        .metric-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-.metric-card:hover {
-transform: translateY(-5px);
-border-color: #60a5fa;
-}
+        .metric-card h4 {
+            font-size: 1.6rem;
+            margin: 0 0 0.5rem 0;
+            color: #fff;
+            font-weight: 600;
+        }
 
-.metric-icon {
-font-size: 2.5rem;
-margin-bottom: 1rem;
-}
+        .metric-card p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
 
-.metric-card h4 {
-font-size: 1.6rem;
-margin: 0 0 0.5rem 0;
-color: #fff;
-font-weight: 600;
-}
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .financial-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid #c084fc;
+            box-shadow: 0 0 20px rgba(192, 132, 252, 0.1);
+        }
 
-.metric-card p {
-font-size: 1.1rem;
-margin: 0;
-}
+        .financial-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 1rem 0;
+        }
 
-/* Terminal Block */
-.terminal-block {
-background: #000;
-border: 1px solid #333;
-border-left: 4px solid #c084fc;
-padding: 2rem;
-border-radius: 8px;
-text-align: left;
-margin: 2rem auto;
-max-width: 800px;
-font-family: monospace;
-color: #c084fc;
-font-size: 1.2rem;
-}
+        .terminal-block {
+            background: #000;
+            border: 1px solid #333;
+            border-left: 4px solid #c084fc;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+            margin: 2rem auto;
+            max-width: 800px;
+            font-family: monospace;
+            color: #c084fc;
+            font-size: 1.2rem;
+        }
 
-/* Navigation */
-.controls {
-position: absolute;
-bottom: 40px;
-right: 40px;
-display: flex;
-gap: 15px;
-z-index: 100;
-}
+        .controls {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
 
-button {
-background: rgba(255,255,255,0.05);
-border: 1px solid var(--card-border);
-color: var(--text-primary);
-padding: 12px 24px;
-font-size: 1.1rem;
-font-weight: 600;
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.2s;
-}
+        button {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
 
-button:hover {
-background: rgba(255,255,255,0.1);
-border-color: var(--text-primary);
-}
+        button:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--text-primary);
+        }
 
-/* Progress Bar */
-.progress-container {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 6px;
-background: var(--card-border);
-}
+        .progress-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--card-border);
+        }
 
-.progress-bar {
-height: 100%;
-background: linear-gradient(90deg, #60a5fa, #c084fc);
-width: 0%;
-transition: width 0.4s ease;
-}
-</style>
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+    </style>
 </head>
 <body>
 
-<div class="deck-container">
+    <div class="deck-container">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <div class="badge">Building Infrastructure That Sustains</div>
+            <h1>The Ultimate API Advantage</h1>
+            <div class="tagline">Smarter. Smaller. Faster.</div>
+            <h3>Building the most profitable, high-throughput AI infrastructure on Earth.</h3>
+            
+            <div class="founder-box">
+                <div class="founder-name">Karthik B.</div>
+                <div class="founder-title">Founder & Lead Engineer</div>
+                <div class="founder-title">B.Tech Computer Science and Engineering (IoT), Shiv Nadar University Chennai</div>
+            </div>
+        </div>
 
-<!-- Slide 1: Title -->
-<div class="slide active">
-<div class="badge">A Radical New Architecture</div>
-<h1>The Ultimate API Advantage</h1>
-<div class="tagline">Smarter. Smaller. Faster.</div>
-<h3>Building the most profitable, high-throughput AI infrastructure on Earth.</h3>
+        <!-- Slide 2: The Margin Problem -->
+        <div class="slide">
+            <h2>The Dirty Secret of AI Startups</h2>
+            <h3>Inference margins are fundamentally broken.</h3>
+            <div class="metrics-grid" style="grid-template-columns: 1fr;">
+                <div class="metric-card" style="border-left: 4px solid #ef4444;">
+                    <p style="font-size: 1.4rem; color: #fff;">AI giants are burning billions on server costs. Standard 16-bit AI requires complex decimal matrix multiplication, draining massive amounts of electricity and requiring $40,000 GPUs just to generate text. The intelligence is there, but the business model is bleeding cash.</p>
+                </div>
+            </div>
+        </div>
 
-<div class="founder-box">
-<div class="founder-name">Karthik B.</div>
-<div class="founder-title">Founder & Lead Engineer</div>
-<div class="founder-title">B.Tech Computer Science and Engineering (IoT), Shiv Nadar University Chennai</div>
-</div>
-</div>
+        <!-- Slide 3: The 1.58-Bit Architecture -->
+        <div class="slide">
+            <h2>The 1.58-Bit Breakthrough</h2>
+            <h3>A radically new ternary math framework: We replace heavy decimals with just three states (-1, 0, 1).</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">🚀</div>
+                    <h4>Exponentially Faster Tokens</h4>
+                    <p>By replacing multiplication with pure addition, our backend generates tokens at blistering speeds.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🧠</div>
+                    <h4>Same Elite Reasoning</h4>
+                    <p>This compression does NOT cause "brain damage." The model retains full coding and reasoning capabilities.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📦</div>
+                    <h4>Drastically Smaller Footprint</h4>
+                    <p>A massive 100-Billion parameter model shrinks from requiring a supercomputer down to just ~30GB of VRAM.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🌐</div>
+                    <h4>DePIN Ready</h4>
+                    <p>Our ultra-lightweight models can be routed across Decentralized Physical Infrastructure Networks globally.</p>
+                </div>
+            </div>
+        </div>
 
-<!-- Slide 2: The Margin Problem -->
-<div class="slide">
-<h2>The Dirty Secret of AI Startups</h2>
-<h3>Inference margins are broken.</h3>
-<div class="metrics-grid" style="grid-template-columns: 1fr;">
-<div class="metric-card" style="border-left: 4px solid #ef4444;">
-<p style="font-size: 1.4rem; color: #fff;">Cloud providers and AI giants are burning billions on server costs. Standard 16-bit AI requires complex decimal matrix multiplication, draining massive amounts of electricity and requiring $40,000 GPUs just to generate text. The intelligence is there, but the business model is bleeding cash.</p>
-</div>
-</div>
-</div>
+        <!-- Slide 4: Tested & Proven -->
+        <div class="slide">
+            <div class="badge">MVP Validation</div>
+            <h2>Not Just Theoretical. It Works.</h2>
+            <h3>We successfully built and executed the proprietary BitDistill pipeline.</h3>
+            
+            <div class="terminal-block">
+                > Initializing 1.58-Bit Architecture (bfloat16)...<br>
+                > Booting Multi-Head Attention Transfer...<br>
+                > Hardware: NVIDIA A100 GPU Cluster<br>
+                > Status: SUCCESS. Loss converged safely at Step 5000.
+            </div>
+            
+            <p>Our MVP is nearly finalized. The dual-loss distillation pipeline successfully copies the internal cognitive routing of massive models down to a 1-bit format, crushing R&D compute time.</p>
+        </div>
 
-<!-- Slide 3: The 1.58-Bit Architecture -->
-<div class="slide">
-<h2>The 1.58-Bit Breakthrough</h2>
-<h3>A radically new ternary math framework: We replace heavy decimals with just three states (-1, 0, 1).</h3>
+        <!-- Slide 5: The Financials & LVL1 Metrics -->
+        <div class="slide">
+            <h2>By The Numbers</h2>
+            <h3>Current Stage: Pre-Product & MVP Finalization</h3>
+            
+            <div class="financial-grid">
+                <div class="financial-card">
+                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.2rem;">CURRENT MRR</h4>
+                    <div class="financial-value">$0</div>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Pre-revenue.<br>Focusing exclusively on core backend architecture.</p>
+                </div>
+                <div class="financial-card">
+                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.2rem;">BURN RATE</h4>
+                    <div class="financial-value">Ultra-Lean</div>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Currently bootstrapped. 1.58-bit optimization keeps our R&D compute costs near zero.</p>
+                </div>
+                <div class="financial-card">
+                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.2rem;">TARGET RUNWAY</h4>
+                    <div class="financial-value">18 Mo.</div>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Raising seed capital to secure 18 months of multi-node H200 cluster access.</p>
+                </div>
+            </div>
+        </div>
 
-<div class="metrics-grid">
-<div class="metric-card">
-<div class="metric-icon">🚀</div>
-<h4>Exponentially Faster Token Generation</h4>
-<p>By replacing multiplication with pure addition, our backend generates tokens at blistering speeds.</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon">🧠</div>
-<h4>Same Elite Reasoning</h4>
-<p>The architecture is proven: this compression does NOT cause "brain damage." The model retains full coding and reasoning capabilities.</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon">📦</div>
-<h4>Drastically Smaller VRAM Footprint</h4>
-<p>A massive 100-Billion parameter model shrinks from requiring a supercomputer down to just 30GB of VRAM.</p>
-</div>
-<div class="metric-card">
-<div class="metric-icon">📊</div>
-<h4>Higher Data Density</h4>
-<p>With a vastly smaller mathematical footprint, we can stuff significantly more training logic into the model than traditional architectures.</p>
-</div>
-</div>
-</div>
+        <!-- Slide 6: The Ask -->
+        <div class="slide">
+            <h2>The Objective</h2>
+            <h3>Fueling the massive-scale distillation run.</h3>
+            
+            <div class="metrics-grid" style="grid-template-columns: 1fr;">
+                <div class="metric-card" style="text-align: center; border-color: #60a5fa;">
+                    <p style="font-size: 1.5rem; color: #fff;">We are seeking seed capital to finalize our MVP and deploy the API.</p>
+                    <p style="margin-top: 1rem;">This funding unlocks the compute required to distill a massive open-source model into 1.58 bits, allowing us to launch our enterprise-grade, high-margin inference API to the global market.</p>
+                </div>
+            </div>
+        </div>
 
-<!-- Slide 4: The Provider-Side Masterstroke -->
-<div class="slide">
-<div class="badge">Our Business Model</div>
-<h2>The "Provider-Side" Masterstroke</h2>
-<h3>We don't force consumers to download models. We become the cloud.</h3>
+    </div>
 
-<div class="metrics-grid" style="grid-template-columns: 1fr;">
-<div class="metric-card" style="border-color: #c084fc;">
-<p style="font-size: 1.3rem; color: #fff;">By keeping this hyper-efficient architecture on our backend, we completely disrupt the enterprise API market. We can offer an API just as smart as OpenAI or DeepSeek, charge developers <strong>half the price</strong>, and still maintain <strong>drastically higher profit margins</strong> because our server overhead is 70% lower.</p>
-</div>
-</div>
-</div>
+    <!-- Controls & Progress -->
+    <div class="controls">
+        <button onclick="prevSlide()">&#8592; Back</button>
+        <button onclick="nextSlide()">Next &#8594;</button>
+    </div>
+    
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-<!-- Slide 5: The Infrastructure Advantage (DePIN) -->
-<div class="slide">
-<h2>Unlocking Decentralized Infrastructure</h2>
-<h3>Lower hardware barriers equal unlimited scaling.</h3>
-<p style="text-align: left; max-width: 900px; margin: 0 auto;">Because our 100B models require a fraction of standard GPU memory, we are not beholden to massive hyperscaler server farms. This architecture perfectly positions us to utilize <strong>DePIN (Decentralized Physical Infrastructure Networks)</strong>. We can route enterprise inference across distributed, lightweight nodes globally—creating an un-killable, infinitely scalable backend grid.</p>
-</div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('progressBar');
 
-<!-- Slide 6: Tested & Proven -->
-<div class="slide">
-<div class="badge">Tested & Proven Logs</div>
-<h2>Not Just Theoretical. It Works.</h2>
-<h3>We successfully built and executed the proprietary BitDistill pipeline.</h3>
+        function updateDeck() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = progress + '%';
+        }
 
-<div class="terminal-block">
-> Initializing 1.58-Bit Architecture (bfloat16)...<br>
-> Booting Multi-Head Attention Transfer...<br>
-> Hardware: NVIDIA A100 GPU Cluster<br>
-> Status: SUCCESS. Loss converged safely at Step 5000.
-</div>
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateDeck();
+            }
+        }
 
-<p>Our dual-loss distillation pipeline successfully copies the internal cognitive routing of massive models down to a 1-bit format, crushing R&D time from weeks into hours.</p>
-</div>
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateDeck();
+            }
+        }
 
-<!-- Slide 7: The Ask -->
-<div class="slide">
-<h2>The Objective</h2>
-<h3>Fueling the massive-scale distillation run.</h3>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
 
-<div class="metrics-grid" style="grid-template-columns: 1fr;">
-<div class="metric-card" style="text-align: center; border-color: #60a5fa;">
-<p style="font-size: 1.5rem; color: #fff;">We are seeking seed capital to secure <strong>High-Performance Distributed H200 Clusters</strong>.</p>
-<p style="margin-top: 1rem;">This funding unlocks the compute required to distill a 100B+ open-source model into 1.58 bits, allowing us to launch our enterprise-grade, high-margin inference API to the global market.</p>
-</div>
-</div>
-</div>
-
-</div>
-
-<!-- Controls & Progress -->
-<div class="controls">
-<button onclick="prevSlide()">← Back</button>
-<button onclick="nextSlide()">Next →</button>
-</div>
-
-<div class="progress-container">
-<div class="progress-bar" id="progressBar"></div>
-</div>
-
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const progressBar = document.getElementById('progressBar');
-
-function updateDeck() {
-slides.forEach((slide, index) => {
-if (index === currentSlide) {
-slide.classList.add('active');
-} else {
-slide.classList.remove('active');
-}
-});
-
-// Update Progress Bar
-const progress = ((currentSlide + 1) / slides.length) * 100;
-progressBar.style.width = progress + '%';
-}
-
-function nextSlide() {
-if (currentSlide < slides.length - 1) {
-currentSlide++;
-updateDeck();
-}
-}
-
-function prevSlide() {
-if (currentSlide > 0) {
-currentSlide--;
-updateDeck();
-}
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-if (e.key === 'ArrowRight' || e.key === 'Space') {
-nextSlide();
-} else if (e.key === 'ArrowLeft') {
-prevSlide();
-}
-});
-
-// Initialize progress bar
-updateDeck();
-</script>
+        updateDeck();
+    </script>
 </body>
 </html>
-
-
-
-
-Sent from Proton Mail for Android.
