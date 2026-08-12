@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1.58-Bit AI Infrastructure | LVL1 Pitch Deck</title>
+    <title>Next-Gen AI Infrastructure | Grant & Incubation Pitch</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
         :root {
-            --bg-color: #050505;
-            --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
-            --accent: #3b82f6; 
-            --accent-glow: rgba(59, 130, 246, 0.4);
-            --card-bg: #111111;
-            --card-border: #222222;
+            --bg-color: #030712;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --accent: #10b981; 
+            --accent-glow: rgba(16, 185, 129, 0.3);
+            --card-bg: #111827;
+            --card-border: #1f2937;
         }
 
         body, html {
@@ -35,18 +36,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 60%);
+            background: radial-gradient(circle at 50% -20%, #064e3b 0%, transparent 70%);
         }
 
         .slide {
             position: absolute;
             width: 85%;
-            max-width: 1150px;
+            max-width: 1200px;
             opacity: 0;
             visibility: hidden;
-            transform: scale(0.95) translateY(20px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: center;
+            transform: scale(0.98) translateY(15px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
         }
 
         .slide.active {
@@ -56,214 +57,129 @@
         }
 
         h1 {
-            font-size: 4.5rem;
+            font-size: 4rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
             line-height: 1.1;
-            letter-spacing: -0.03em;
-        }
-
-        h2 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
             letter-spacing: -0.02em;
         }
 
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--card-border);
+            padding-bottom: 0.5rem;
+        }
+
         h3 {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             font-weight: 400;
             color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            line-height: 1.4;
+            margin-bottom: 2rem;
+            line-height: 1.5;
         }
 
         p, li {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             line-height: 1.6;
             color: var(--text-secondary);
         }
 
         .highlight {
-            color: #60a5fa;
-            font-weight: 600;
-        }
-
-        .tagline {
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #60a5fa, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 1.5rem 0;
+            color: var(--accent);
+            font-weight: 700;
         }
 
         .badge {
             display: inline-block;
-            background: rgba(96, 165, 250, 0.1);
-            color: #60a5fa;
-            border: 1px solid #60a5fa;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.1rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 1.5rem;
-            box-shadow: 0 0 15px var(--accent-glow);
         }
 
-        .founder-box {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--card-border);
-            display: inline-block;
-            text-align: center;
-        }
-        
-        .founder-name {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #fff;
-        }
-        
-        .founder-title {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-top: 0.2rem;
-        }
-
-        .metrics-grid {
+        .grid-2 {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-            text-align: left;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
         }
 
-        .metric-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--card-border);
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .metric-card:hover {
-            transform: translateY(-5px);
-            border-color: #60a5fa;
-        }
-
-        .metric-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .metric-card h4 {
-            font-size: 1.6rem;
-            margin: 0 0 0.5rem 0;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .metric-card p {
-            font-size: 1.1rem;
-            margin: 0;
-        }
-
-        /* Enhanced Financial Tables & Grids */
-        .financial-grid {
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-top: 1.5rem;
-            text-align: center;
         }
-        
-        .financial-card {
+
+        .card {
             background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 1px solid #c084fc;
-            box-shadow: 0 0 20px rgba(192, 132, 252, 0.05);
-        }
-
-        .financial-value {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #fff;
-            margin: 0.5rem 0;
-        }
-
-        .allocation-bar {
-            width: 100%;
-            height: 24px;
-            background: #222;
+            padding: 2rem;
             border-radius: 12px;
-            display: flex;
-            overflow: hidden;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            border: 1px solid var(--card-border);
         }
 
-        .alloc-compute { background: #3b82f6; width: 65%; }
-        .alloc-eng { background: #8b5cf6; width: 25%; }
-        .alloc-infra { background: #10b981; width: 10%; }
-
-        .allocation-legend {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1rem;
-            color: var(--text-secondary);
+        .card h4 {
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            color: #fff;
         }
 
-        .legend-item span {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        .terminal-block {
+        .terminal {
             background: #000;
             border: 1px solid #333;
-            border-left: 4px solid #c084fc;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: left;
-            margin: 2rem auto;
-            max-width: 800px;
-            font-family: monospace;
-            color: #c084fc;
-            font-size: 1.2rem;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
         }
 
+        .research-citation {
+            font-size: 0.9rem;
+            color: #6b7280;
+            border-left: 2px solid #374151;
+            padding-left: 1rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        /* Controls */
         .controls {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             right: 40px;
             display: flex;
-            gap: 15px;
+            gap: 12px;
             z-index: 100;
         }
 
         button {
-            background: rgba(255,255,255,0.05);
+            background: var(--card-bg);
             border: 1px solid var(--card-border);
             color: var(--text-primary);
-            padding: 12px 24px;
-            font-size: 1.1rem;
+            padding: 10px 20px;
+            font-size: 1rem;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: all 0.2s;
         }
 
         button:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--text-primary);
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         .progress-container {
@@ -271,15 +187,22 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 6px;
-            background: var(--card-border);
+            height: 4px;
+            background: var(--card-bg);
         }
 
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #60a5fa, #c084fc);
+            background: var(--accent);
             width: 0%;
-            transition: width 0.4s ease;
+            transition: width 0.3s ease;
+        }
+        
+        .center-slide {
+            text-align: center;
+        }
+        .center-slide h2 {
+            border: none;
         }
     </style>
 </head>
@@ -288,119 +211,161 @@
     <div class="deck-container">
         
         <!-- Slide 1: Title -->
-        <div class="slide active">
-            <div class="badge">Building Infrastructure That Sustains</div>
-            <h1>The Ultimate API Advantage</h1>
-            <div class="tagline">Smarter. Smaller. Faster.</div>
-            <h3>Building the most profitable, high-throughput AI infrastructure on Earth.</h3>
+        <div class="slide active center-slide">
+            <div class="badge">Deep Tech R&D Initiative</div>
+            <h1>Sovereign AI Infrastructure</h1>
+            <h3 style="color: var(--accent); font-size: 2rem; font-weight: 600;">Breaking the FP16 Compute Bottleneck</h3>
+            <p style="max-width: 700px; margin: 2rem auto;">Research and development of ternary precision and hyperbolic embedding architectures for high-throughput, edge-capable B2B API deployment.</p>
             
-            <div class="founder-box">
-                <div class="founder-name">Karthik B.</div>
-                <div class="founder-title">Founder & Lead Engineer</div>
-                <div class="founder-title">B.Tech Computer Science and Engineering (IoT), Shiv Nadar University Chennai</div>
+            <div style="margin-top: 4rem; text-align: center;">
+                <p style="color: #fff; font-weight: 600; font-size: 1.2rem; margin: 0;">Karthik B.</p>
+                <p style="font-size: 1rem; margin: 0;">Lead Researcher & Founder</p>
+                <p style="font-size: 0.9rem; color: #6b7280;">B.Tech Computer Science and Engineering (IoT), Shiv Nadar University Chennai</p>
             </div>
         </div>
 
-        <!-- Slide 2: The Margin Problem -->
+        <!-- Slide 2: The Core Concept -->
         <div class="slide">
-            <h2>The Dirty Secret of AI Startups</h2>
-            <h3>Inference margins are fundamentally broken.</h3>
-            <div class="metrics-grid" style="grid-template-columns: 1fr;">
-                <div class="metric-card" style="border-left: 4px solid #ef4444;">
-                    <p style="font-size: 1.4rem; color: #fff;">AI giants are burning billions on server costs. Standard 16-bit AI requires complex decimal matrix multiplication, draining massive amounts of electricity and requiring $40,000 GPUs just to generate text. The intelligence is there, but the business model is bleeding cash.</p>
+            <h2>The Infrastructure Crisis</h2>
+            <h3>The global AI supply chain is severely bottlenecked by standard computational math.</h3>
+            <div class="grid-2">
+                <div class="card" style="border-left: 3px solid #ef4444;">
+                    <h4>The FP16 Reality</h4>
+                    <p>Current Large Language Models rely on 16-bit decimal parameters. This requires complex matrix multiplication, driving up power consumption, inference latency, and hardware requirements.</p>
+                    <p>Result: Deep reliance on hyperscaler cloud monopolies and exclusionary GPU pricing.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Slide 3: The 1.58-Bit Architecture -->
-        <div class="slide">
-            <h2>The 1.58-Bit Breakthrough</h2>
-            <h3>A radically new ternary math framework: We replace heavy decimals with just three states (-1, 0, 1).</h3>
-            
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">🚀</div>
-                    <h4>Exponentially Faster Tokens</h4>
-                    <p>By replacing multiplication with pure addition, our backend generates tokens at blistering speeds, lowering inference latency to near-zero.</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">🧠</div>
-                    <h4>Same Elite Reasoning</h4>
-                    <p>This compression does NOT cause "brain damage." Validated through dual-loss distillation, the model retains full coding and reasoning logic.</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">📦</div>
-                    <h4>Drastically Smaller Footprint</h4>
-                    <p>A massive 100-Billion parameter model shrinks from requiring an entire supercomputer node down to just ~30GB of VRAM.</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">♾️</div>
-                    <h4>Hyperbolic Scaling (Horizon 2)</h4>
-                    <p>Because hyperbolic space volume grows exponentially, our future architecture will map these ternary weights into hyperbolic manifolds, achieving unprecedented hierarchical data density.</p>
+                <div class="card" style="border-left: 3px solid var(--accent);">
+                    <h4>The Proposed Paradigm</h4>
+                    <p>We are engineering a foundational shift in model architecture, focusing on extreme quantization and non-Euclidean data mapping to reduce infrastructure COGS (Cost of Goods Sold) by 70%, democratizing enterprise API access.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 4: Tested & Proven -->
+        <!-- Slide 3: Horizon 1 -->
         <div class="slide">
-            <div class="badge">MVP Validation</div>
-            <h2>Not Just Theoretical. It Works.</h2>
-            <h3>We successfully built and executed the proprietary BitDistill pipeline.</h3>
-            
-            <div class="terminal-block">
-                > Initializing 1.58-Bit Architecture (bfloat16)...<br>
-                > Booting Multi-Head Attention Transfer...<br>
-                > Hardware: NVIDIA A100 GPU Cluster<br>
-                > Status: SUCCESS. Loss converged safely at Step 5000.
+            <div class="badge">Research Horizon 1</div>
+            <h2>1.58-Bit Ternary Networks (BitNet)</h2>
+            <h3>Replacing floating-point decimals with three definitive states: {-1, 0, 1}.</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>Addition vs. Multiplication</h4>
+                    <p>By forcing weights into ternary states, heavy matrix multiplication is entirely replaced by pure addition (INT8/INT4 accumulation). This radically drops latency and energy expenditure.</p>
+                </div>
+                <div class="card">
+                    <h4>VRAM Compression</h4>
+                    <p>A 100-Billion parameter foundation model compresses from ~200GB to just ~30GB of VRAM, allowing enterprise-grade models to run on fractional hardware configurations.</p>
+                </div>
+                <div class="card">
+                    <h4>Performance Parity</h4>
+                    <p>Empirical research demonstrates that with sub-layer normalization, ternary architectures match the perplexity and downstream task performance of full FP16 models.</p>
+                </div>
             </div>
-            
-            <p>Our MVP is nearly finalized. The dual-loss distillation pipeline successfully copies the internal cognitive routing of massive models down to a 1-bit format, crushing R&D compute time and derisking the core math.</p>
-        </div>
-
-        <!-- Slide 5: The Financials & LVL1 Metrics -->
-        <div class="slide">
-            <h2>Financials & Unit Economics</h2>
-            <h3>Engineered for maximum sustainability and high-margin API scaling.</h3>
-            
-            <div class="financial-grid">
-                <div class="financial-card">
-                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.1rem;">CURRENT MRR</h4>
-                    <div class="financial-value">$0</div>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Pre-product stage. Hyper-focused on validating the core architectural math.</p>
-                </div>
-                <div class="financial-card">
-                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.1rem;">CURRENT BURN</h4>
-                    <div class="financial-value">~$250<span style="font-size: 1.2rem;">/mo</span></div>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Bootstrapped. 1.58-bit optimization keeps our cloud testing costs near absolute zero.</p>
-                </div>
-                <div class="financial-card">
-                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.1rem;">COGS REDUCTION</h4>
-                    <div class="financial-value">70%</div>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Compared to standard FP16 API providers, our backend inference overhead drops drastically.</p>
-                </div>
+            <div class="research-citation">
+                Validation Baseline: "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits" (Ma et al., 2024, Microsoft Research).
             </div>
         </div>
 
-        <!-- Slide 6: Capital Allocation & Ask -->
+        <!-- Slide 4: Horizon 2 -->
         <div class="slide">
-            <h2>The Objective</h2>
-            <h3>Raising $500,000 to fuel the massive-scale distillation run.</h3>
+            <div class="badge">Research Horizon 2</div>
+            <h2>Hyperbolic LLM Scaling</h2>
+            <h3>Pushing data density beyond the limits of Euclidean geometry.</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Exponential Volume Growth</h4>
+                    <p>Standard LLMs map data in flat Euclidean space. However, human language, code, and logic are inherently hierarchical (tree-like). Hyperbolic space expands exponentially, perfectly accommodating this hierarchy.</p>
+                </div>
+                <div class="card">
+                    <h4>The Ternary-Hyperbolic Synergy</h4>
+                    <p>By embedding our 1.58-bit quantized weights into hyperbolic manifolds, we aim to drastically reduce the embedding dimensions required to capture complex semantic relationships, yielding a smaller, vastly more intelligent model.</p>
+                </div>
+            </div>
+            <div class="research-citation">
+                Validation Baseline: Hyperbolic Neural Networks and non-Euclidean representation learning theory.
+            </div>
+        </div>
+
+        <!-- Slide 5: Empirical Proof -->
+        <div class="slide">
+            <div class="badge">Technical Validation</div>
+            <h2>Proof of Concept: The BitDistill Pipeline</h2>
+            <h3>We have successfully engineered and verified the core distillation loop.</h3>
+            <p>Training ternary models from scratch requires trillions of tokens. We bypassed this via a proprietary dual-loss knowledge distillation pipeline.</p>
             
-            <div class="metrics-grid" style="grid-template-columns: 1fr;">
-                <div class="metric-card" style="border-color: #60a5fa;">
-                    <p style="font-size: 1.3rem; color: #fff; margin-bottom: 1rem;">This seed capital secures 18 months of runway and unlocks the multi-node distributed H200 compute required to distill a 100B+ open-source model into 1.58 bits, allowing us to launch our enterprise-grade API.</p>
-                    
-                    <h4 style="margin-top: 2rem; font-size: 1.1rem; color: var(--text-secondary);">PROPOSED CAPITAL ALLOCATION</h4>
-                    <div class="allocation-bar">
-                        <div class="alloc-compute"></div>
-                        <div class="alloc-eng"></div>
-                        <div class="alloc-infra"></div>
-                    </div>
-                    <div class="allocation-legend">
-                        <div class="legend-item"><span style="background: #3b82f6;"></span>65% Core Compute (H200 Clusters)</div>
-                        <div class="legend-item"><span style="background: #8b5cf6;"></span>25% Engineering & ML Team</div>
-                        <div class="legend-item"><span style="background: #10b981;"></span>10% GTM & API Infrastructure</div>
-                    </div>
+            <div class="terminal">
+                > Initializing Dual-Loss Architecture (Logit + MSE)...<br>
+                > Booting Multi-Head Eager Attention Transfer...<br>
+                > Hardware Validated: NVIDIA A100 (40GB) in bfloat16<br>
+                > Result: 5,000-step smoke test complete.<br>
+                > Status: Attention mapping converged successfully without variance collapse. 
+            </div>
+            
+            <p style="margin-top: 1rem;">By forcing the 1-bit student model to mathematically replicate the internal cognitive routing (attention matrices) of a 16-bit Teacher, we accelerate the training curve exponentially.</p>
+        </div>
+
+        <!-- Slide 6: Challenges & Mitigations -->
+        <div class="slide">
+            <h2>Architectural Challenges & Mitigations</h2>
+            <h3>Addressing the friction points of deep-tech quantization.</h3>
+            <div class="grid-2">
+                <div class="card" style="border: 1px solid #6b7280;">
+                    <h4 style="color: #d1d5db;">Challenge 1: Training Stability & Brain Damage</h4>
+                    <p>Extreme quantization typically destroys model logic, leading to NaN loss explosions and total cognitive degradation (gibberish generation) during standard fine-tuning.</p>
+                    <hr style="border-color: #374151; margin: 1rem 0;">
+                    <h4 style="color: var(--accent);">Mitigation</h4>
+                    <p>Implementation of custom Sub-Layer Normalization (SubLN) modules to control weight variance, paired with our verified attention-transfer MSE loss framework.</p>
+                </div>
+                <div class="card" style="border: 1px solid #6b7280;">
+                    <h4 style="color: #d1d5db;">Challenge 2: The Memory Wall of Distillation</h4>
+                    <p>While inference is cheap, extracting massive attention matrices during the distillation phase requires astronomical VRAM, preventing single-node execution for larger parameter counts.</p>
+                    <hr style="border-color: #374151; margin: 1rem 0;">
+                    <h4 style="color: var(--accent);">Mitigation</h4>
+                    <p>Utilizing Distributed Data Parallelism (DDP) across high-memory multi-GPU clusters (e.g., H200/A100 grids) alongside efficient memory offloading during the training cycle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: The Leverage & B2B Pivot -->
+        <div class="slide">
+            <div class="badge">The Business Model</div>
+            <h2>The Infrastructure Leverage (B2B API)</h2>
+            <h3>Research engineered for commercial deployment.</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>High-Margin Inference</h4>
+                    <p>We host the ultra-lightweight architecture on our backend. Server overhead drops by 70%, allowing us to offer developers an enterprise API at highly disruptive price points.</p>
+                </div>
+                <div class="card">
+                    <h4>DePIN / IoT Integration</h4>
+                    <p>As an IoT-engineered framework, the lightweight footprint allows future API requests to be routed through Decentralized Physical Infrastructure Networks (edge nodes).</p>
+                </div>
+                <div class="card">
+                    <h4>Sovereign Capability</h4>
+                    <p>Eliminates dependency on foreign cloud monopolies by enabling advanced AI processing directly on domestic, mid-tier data center hardware.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: The Ask -->
+        <div class="slide center-slide">
+            <h2>The Resource Ask</h2>
+            <h3 style="max-width: 800px; margin: 0 auto 2rem auto;">Seeking Incubation Support & Government Compute Credits</h3>
+            
+            <div class="grid-3" style="text-align: left;">
+                <div class="card" style="background: transparent; border-color: var(--accent);">
+                    <h4 style="color: var(--accent);">Current Burn Rate</h4>
+                    <p style="color: #fff; font-size: 2rem; font-weight: bold; margin: 0.5rem 0;">Lean</p>
+                    <p>Bootstrapped. Pre-revenue ($0 MRR). R&D methodology keeps testing costs virtually zero.</p>
+                </div>
+                <div class="card" style="background: transparent; border-color: var(--accent);">
+                    <h4 style="color: var(--accent);">Target Milestone</h4>
+                    <p style="color: #fff; font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0;">10 Billion Tokens</p>
+                    <p>Executing the continual pre-training warm-up phase to cross the coherence threshold.</p>
+                </div>
+                <div class="card" style="background: transparent; border-color: var(--accent);">
+                    <h4 style="color: var(--accent);">Required Capital</h4>
+                    <p style="color: #fff; font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0;">GPU Cluster Access</p>
+                    <p>Seeking compute grants (IndiaAI Mission / academic racks) for a multi-node distributed distillation run.</p>
                 </div>
             </div>
         </div>
@@ -409,7 +374,7 @@
 
     <!-- Controls & Progress -->
     <div class="controls">
-        <button onclick="prevSlide()">&#8592; Back</button>
+        <button onclick="prevSlide()">&#8592; Prev</button>
         <button onclick="nextSlide()">Next &#8594;</button>
     </div>
     
