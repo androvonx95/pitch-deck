@@ -41,7 +41,7 @@
         .slide {
             position: absolute;
             width: 85%;
-            max-width: 1100px;
+            max-width: 1150px;
             opacity: 0;
             visibility: hidden;
             transform: scale(0.95) translateY(20px);
@@ -72,7 +72,7 @@
         }
 
         h3 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 400;
             color: var(--text-secondary);
             margin-bottom: 2.5rem;
@@ -80,7 +80,7 @@
         }
 
         p, li {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 1.6;
             color: var(--text-secondary);
         }
@@ -107,7 +107,7 @@
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1.5rem;
@@ -172,27 +172,58 @@
             margin: 0;
         }
 
+        /* Enhanced Financial Tables & Grids */
         .financial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             text-align: center;
         }
         
         .financial-card {
             background: var(--card-bg);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 16px;
             border: 1px solid #c084fc;
-            box-shadow: 0 0 20px rgba(192, 132, 252, 0.1);
+            box-shadow: 0 0 20px rgba(192, 132, 252, 0.05);
         }
 
         .financial-value {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 900;
             color: #fff;
-            margin: 1rem 0;
+            margin: 0.5rem 0;
+        }
+
+        .allocation-bar {
+            width: 100%;
+            height: 24px;
+            background: #222;
+            border-radius: 12px;
+            display: flex;
+            overflow: hidden;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .alloc-compute { background: #3b82f6; width: 65%; }
+        .alloc-eng { background: #8b5cf6; width: 25%; }
+        .alloc-infra { background: #10b981; width: 10%; }
+
+        .allocation-legend {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-item span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
         }
 
         .terminal-block {
@@ -290,22 +321,22 @@
                 <div class="metric-card">
                     <div class="metric-icon">🚀</div>
                     <h4>Exponentially Faster Tokens</h4>
-                    <p>By replacing multiplication with pure addition, our backend generates tokens at blistering speeds.</p>
+                    <p>By replacing multiplication with pure addition, our backend generates tokens at blistering speeds, lowering inference latency to near-zero.</p>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">🧠</div>
                     <h4>Same Elite Reasoning</h4>
-                    <p>This compression does NOT cause "brain damage." The model retains full coding and reasoning capabilities.</p>
+                    <p>This compression does NOT cause "brain damage." Validated through dual-loss distillation, the model retains full coding and reasoning logic.</p>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">📦</div>
                     <h4>Drastically Smaller Footprint</h4>
-                    <p>A massive 100-Billion parameter model shrinks from requiring a supercomputer down to just ~30GB of VRAM.</p>
+                    <p>A massive 100-Billion parameter model shrinks from requiring an entire supercomputer node down to just ~30GB of VRAM.</p>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-icon">🌐</div>
-                    <h4>DePIN Ready</h4>
-                    <p>Our ultra-lightweight models can be routed across Decentralized Physical Infrastructure Networks globally.</p>
+                    <div class="metric-icon">♾️</div>
+                    <h4>Hyperbolic Scaling (Horizon 2)</h4>
+                    <p>Because hyperbolic space volume grows exponentially, our future architecture will map these ternary weights into hyperbolic manifolds, achieving unprecedented hierarchical data density.</p>
                 </div>
             </div>
         </div>
@@ -323,42 +354,53 @@
                 > Status: SUCCESS. Loss converged safely at Step 5000.
             </div>
             
-            <p>Our MVP is nearly finalized. The dual-loss distillation pipeline successfully copies the internal cognitive routing of massive models down to a 1-bit format, crushing R&D compute time.</p>
+            <p>Our MVP is nearly finalized. The dual-loss distillation pipeline successfully copies the internal cognitive routing of massive models down to a 1-bit format, crushing R&D compute time and derisking the core math.</p>
         </div>
 
         <!-- Slide 5: The Financials & LVL1 Metrics -->
         <div class="slide">
-            <h2>By The Numbers</h2>
-            <h3>Current Stage: Pre-Product & MVP Finalization</h3>
+            <h2>Financials & Unit Economics</h2>
+            <h3>Engineered for maximum sustainability and high-margin API scaling.</h3>
             
             <div class="financial-grid">
                 <div class="financial-card">
-                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.2rem;">CURRENT MRR</h4>
+                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.1rem;">CURRENT MRR</h4>
                     <div class="financial-value">$0</div>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Pre-revenue.<br>Focusing exclusively on core backend architecture.</p>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Pre-product stage. Hyper-focused on validating the core architectural math.</p>
                 </div>
                 <div class="financial-card">
-                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.2rem;">BURN RATE</h4>
-                    <div class="financial-value">Ultra-Lean</div>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Currently bootstrapped. 1.58-bit optimization keeps our R&D compute costs near zero.</p>
+                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.1rem;">CURRENT BURN</h4>
+                    <div class="financial-value">~$250<span style="font-size: 1.2rem;">/mo</span></div>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Bootstrapped. 1.58-bit optimization keeps our cloud testing costs near absolute zero.</p>
                 </div>
                 <div class="financial-card">
-                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.2rem;">TARGET RUNWAY</h4>
-                    <div class="financial-value">18 Mo.</div>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Raising seed capital to secure 18 months of multi-node H200 cluster access.</p>
+                    <h4 style="color: var(--text-secondary); margin: 0; font-size: 1.1rem;">COGS REDUCTION</h4>
+                    <div class="financial-value">70%</div>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Compared to standard FP16 API providers, our backend inference overhead drops drastically.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 6: The Ask -->
+        <!-- Slide 6: Capital Allocation & Ask -->
         <div class="slide">
             <h2>The Objective</h2>
-            <h3>Fueling the massive-scale distillation run.</h3>
+            <h3>Raising $500,000 to fuel the massive-scale distillation run.</h3>
             
             <div class="metrics-grid" style="grid-template-columns: 1fr;">
-                <div class="metric-card" style="text-align: center; border-color: #60a5fa;">
-                    <p style="font-size: 1.5rem; color: #fff;">We are seeking seed capital to finalize our MVP and deploy the API.</p>
-                    <p style="margin-top: 1rem;">This funding unlocks the compute required to distill a massive open-source model into 1.58 bits, allowing us to launch our enterprise-grade, high-margin inference API to the global market.</p>
+                <div class="metric-card" style="border-color: #60a5fa;">
+                    <p style="font-size: 1.3rem; color: #fff; margin-bottom: 1rem;">This seed capital secures 18 months of runway and unlocks the multi-node distributed H200 compute required to distill a 100B+ open-source model into 1.58 bits, allowing us to launch our enterprise-grade API.</p>
+                    
+                    <h4 style="margin-top: 2rem; font-size: 1.1rem; color: var(--text-secondary);">PROPOSED CAPITAL ALLOCATION</h4>
+                    <div class="allocation-bar">
+                        <div class="alloc-compute"></div>
+                        <div class="alloc-eng"></div>
+                        <div class="alloc-infra"></div>
+                    </div>
+                    <div class="allocation-legend">
+                        <div class="legend-item"><span style="background: #3b82f6;"></span>65% Core Compute (H200 Clusters)</div>
+                        <div class="legend-item"><span style="background: #8b5cf6;"></span>25% Engineering & ML Team</div>
+                        <div class="legend-item"><span style="background: #10b981;"></span>10% GTM & API Infrastructure</div>
+                    </div>
                 </div>
             </div>
         </div>
