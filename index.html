@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next-Gen AI Infrastructure | Grant & Incubation Pitch</title>
+    <title>Next-Gen AI Infrastructure | Deep Tech R&D</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
@@ -82,7 +82,7 @@
         }
 
         p, li {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             line-height: 1.6;
             color: var(--text-secondary);
         }
@@ -133,21 +133,8 @@
             color: #fff;
         }
 
-        .terminal {
-            background: #000;
-            border: 1px solid #333;
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            border-radius: 6px;
-            font-family: 'Fira Code', monospace;
-            color: var(--accent);
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
-        }
-
         .research-citation {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #6b7280;
             border-left: 2px solid #374151;
             padding-left: 1rem;
@@ -155,7 +142,6 @@
             font-style: italic;
         }
 
-        /* Controls */
         .controls {
             position: absolute;
             bottom: 30px;
@@ -215,57 +201,55 @@
             <div class="badge">Deep Tech R&D Initiative</div>
             <h1>Sovereign AI Infrastructure</h1>
             <h3 style="color: var(--accent); font-size: 2rem; font-weight: 600;">Breaking the FP16 Compute Bottleneck</h3>
-            <p style="max-width: 700px; margin: 2rem auto;">Research and development of ternary precision and hyperbolic embedding architectures for high-throughput, edge-capable B2B API deployment.</p>
+            <p style="max-width: 700px; margin: 2rem auto;">Research and development of ternary precision and hyperbolic embedding architectures for high-throughput, drastically cost-reduced enterprise AI deployment.</p>
             
             <div style="margin-top: 4rem; text-align: center;">
-                <p style="color: #fff; font-weight: 600; font-size: 1.2rem; margin: 0;">Karthik B.</p>
-                <p style="font-size: 1rem; margin: 0;">Lead Researcher & Founder</p>
-                <p style="font-size: 0.9rem; color: #6b7280;">B.Tech Computer Science and Engineering (IoT), Shiv Nadar University Chennai</p>
+                <p style="color: #fff; font-weight: 600; font-size: 1.2rem; margin: 0;">Founding Engineer & Research Lead</p>
+                <p style="font-size: 0.9rem; color: #6b7280;">Core Frameworks: 1.58-bit Ternary Networks & Non-Euclidean LLM Scaling</p>
             </div>
         </div>
 
-        <!-- Slide 2: The Core Concept -->
+        <!-- Slide 2: The Core Problem -->
         <div class="slide">
             <h2>The Infrastructure Crisis</h2>
             <h3>The global AI supply chain is severely bottlenecked by standard computational math.</h3>
             <div class="grid-2">
                 <div class="card" style="border-left: 3px solid #ef4444;">
                     <h4>The FP16 Reality</h4>
-                    <p>Current Large Language Models rely on 16-bit decimal parameters. This requires complex matrix multiplication, driving up power consumption, inference latency, and hardware requirements.</p>
-                    <p>Result: Deep reliance on hyperscaler cloud monopolies and exclusionary GPU pricing.</p>
+                    <p>Current Large Language Models rely heavily on 16-bit decimal parameters. This architecture demands complex, floating-point matrix multiplication at every layer, driving up power consumption, inference latency, and hardware constraints.</p>
                 </div>
                 <div class="card" style="border-left: 3px solid var(--accent);">
                     <h4>The Proposed Paradigm</h4>
-                    <p>We are engineering a foundational shift in model architecture, focusing on extreme quantization and non-Euclidean data mapping to reduce infrastructure COGS (Cost of Goods Sold) by 70%, democratizing enterprise API access.</p>
+                    <p>We are engineering a foundational shift in model architecture, focusing on extreme 1.58-bit quantization and non-Euclidean data mapping. The objective is to reduce infrastructure COGS (Cost of Goods Sold) by over 70%, severing reliance on expensive hyperscaler hardware.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 3: Horizon 1 -->
+        <!-- Slide 3: Horizon 1 - 1.58-Bit -->
         <div class="slide">
             <div class="badge">Research Horizon 1</div>
-            <h2>1.58-Bit Ternary Networks (BitNet)</h2>
-            <h3>Replacing floating-point decimals with three definitive states: {-1, 0, 1}.</h3>
+            <h2>1.58-Bit Ternary Networks</h2>
+            <h3>Replacing floating-point decimals with three definitive states: $\{-1, 0, 1\}$.</h3>
             <div class="grid-3">
                 <div class="card">
-                    <h4>Addition vs. Multiplication</h4>
-                    <p>By forcing weights into ternary states, heavy matrix multiplication is entirely replaced by pure addition (INT8/INT4 accumulation). This radically drops latency and energy expenditure.</p>
+                    <h4>Addition over Multiplication</h4>
+                    <p>By forcing weights into ternary states, heavy matrix multiplication is entirely replaced by integer addition. This drastically lowers computing latency and enables highly energy-efficient throughput.</p>
                 </div>
                 <div class="card">
-                    <h4>VRAM Compression</h4>
-                    <p>A 100-Billion parameter foundation model compresses from ~200GB to just ~30GB of VRAM, allowing enterprise-grade models to run on fractional hardware configurations.</p>
+                    <h4>VRAM Compression & Cost</h4>
+                    <p>Memory limits are the largest bottleneck in AI. Ternary precision mathematically shrinks a massive foundation model's memory footprint by up to 10x, enabling massive intelligence to be hosted on mid-tier hardware.</p>
                 </div>
                 <div class="card">
-                    <h4>Performance Parity</h4>
-                    <p>Empirical research demonstrates that with sub-layer normalization, ternary architectures match the perplexity and downstream task performance of full FP16 models.</p>
+                    <h4>No Degradation in Reasoning</h4>
+                    <p>Recent research proves that a 1.58-bit LLM matches its FP16 counterparts in both perplexity and end-task capabilities, maintaining strict coherence in coding and language tasks without suffering cognitive degradation.</p>
                 </div>
             </div>
             <div class="research-citation">
-                Validation Baseline: "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits" (Ma et al., 2024, Microsoft Research).
+                Validation Baseline: "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits" (Ma et al., Microsoft Research, 2024). Proof that native ternary models define a new scaling law for cost-effective AI.
             </div>
         </div>
 
-        <!-- Slide 4: Horizon 2 -->
+        <!-- Slide 4: Horizon 2 - Hyperbolic -->
         <div class="slide">
             <div class="badge">Research Horizon 2</div>
             <h2>Hyperbolic LLM Scaling</h2>
@@ -273,99 +257,59 @@
             <div class="grid-2">
                 <div class="card">
                     <h4>Exponential Volume Growth</h4>
-                    <p>Standard LLMs map data in flat Euclidean space. However, human language, code, and logic are inherently hierarchical (tree-like). Hyperbolic space expands exponentially, perfectly accommodating this hierarchy.</p>
+                    <p>Human language, code semantics, and knowledge bases are not flat; they are inherently hierarchical and tree-like. However, standard LLMs map data in flat Euclidean space. Hyperbolic space expands exponentially, perfectly matching the capacity required for complex hierarchical structures.</p>
                 </div>
                 <div class="card">
                     <h4>The Ternary-Hyperbolic Synergy</h4>
-                    <p>By embedding our 1.58-bit quantized weights into hyperbolic manifolds, we aim to drastically reduce the embedding dimensions required to capture complex semantic relationships, yielding a smaller, vastly more intelligent model.</p>
+                    <p>Standard networks lack corresponding hyperbolic neural network layers, limiting representational power. By eventually mapping our 1.58-bit quantized weights onto hyperbolic manifolds, we aim to drastically reduce the required embedding dimensions, achieving unprecedented data density in smaller parameter boundaries.</p>
                 </div>
             </div>
             <div class="research-citation">
-                Validation Baseline: Hyperbolic Neural Networks and non-Euclidean representation learning theory.
+                Validation Baseline: "Hyperbolic Neural Networks" (Ganea et al., 2018). Established that hyperbolic geometry provides immense representational capacity for hierarchical structures previously unachievable in flat space.
             </div>
         </div>
 
-        <!-- Slide 5: Empirical Proof -->
+        <!-- Slide 5: The Economic Impact -->
         <div class="slide">
-            <div class="badge">Technical Validation</div>
-            <h2>Proof of Concept: The BitDistill Pipeline</h2>
-            <h3>We have successfully engineered and verified the core distillation loop.</h3>
-            <p>Training ternary models from scratch requires trillions of tokens. We bypassed this via a proprietary dual-loss knowledge distillation pipeline.</p>
-            
-            <div class="terminal">
-                > Initializing Dual-Loss Architecture (Logit + MSE)...<br>
-                > Booting Multi-Head Eager Attention Transfer...<br>
-                > Hardware Validated: NVIDIA A100 (40GB) in bfloat16<br>
-                > Result: 5,000-step smoke test complete.<br>
-                > Status: Attention mapping converged successfully without variance collapse. 
-            </div>
-            
-            <p style="margin-top: 1rem;">By forcing the 1-bit student model to mathematically replicate the internal cognitive routing (attention matrices) of a 16-bit Teacher, we accelerate the training curve exponentially.</p>
-        </div>
-
-        <!-- Slide 6: Challenges & Mitigations -->
-        <div class="slide">
-            <h2>Architectural Challenges & Mitigations</h2>
-            <h3>Addressing the friction points of deep-tech quantization.</h3>
-            <div class="grid-2">
-                <div class="card" style="border: 1px solid #6b7280;">
-                    <h4 style="color: #d1d5db;">Challenge 1: Training Stability & Brain Damage</h4>
-                    <p>Extreme quantization typically destroys model logic, leading to NaN loss explosions and total cognitive degradation (gibberish generation) during standard fine-tuning.</p>
-                    <hr style="border-color: #374151; margin: 1rem 0;">
-                    <h4 style="color: var(--accent);">Mitigation</h4>
-                    <p>Implementation of custom Sub-Layer Normalization (SubLN) modules to control weight variance, paired with our verified attention-transfer MSE loss framework.</p>
-                </div>
-                <div class="card" style="border: 1px solid #6b7280;">
-                    <h4 style="color: #d1d5db;">Challenge 2: The Memory Wall of Distillation</h4>
-                    <p>While inference is cheap, extracting massive attention matrices during the distillation phase requires astronomical VRAM, preventing single-node execution for larger parameter counts.</p>
-                    <hr style="border-color: #374151; margin: 1rem 0;">
-                    <h4 style="color: var(--accent);">Mitigation</h4>
-                    <p>Utilizing Distributed Data Parallelism (DDP) across high-memory multi-GPU clusters (e.g., H200/A100 grids) alongside efficient memory offloading during the training cycle.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 7: The Leverage & B2B Pivot -->
-        <div class="slide">
-            <div class="badge">The Business Model</div>
-            <h2>The Infrastructure Leverage (B2B API)</h2>
-            <h3>Research engineered for commercial deployment.</h3>
+            <div class="badge">The Financial Leverage</div>
+            <h2>The API Economics</h2>
+            <h3>Why extreme quantization reshapes commercial deployment.</h3>
             <div class="grid-3">
                 <div class="card">
-                    <h4>High-Margin Inference</h4>
-                    <p>We host the ultra-lightweight architecture on our backend. Server overhead drops by 70%, allowing us to offer developers an enterprise API at highly disruptive price points.</p>
+                    <h4>70%+ Lower Server Costs</h4>
+                    <p>Replacing $40,000 H100 servers with mid-tier, locally hosted GPU arrays allows our inference backend to operate at a fraction of the cost of standard enterprise API providers.</p>
                 </div>
                 <div class="card">
-                    <h4>DePIN / IoT Integration</h4>
-                    <p>As an IoT-engineered framework, the lightweight footprint allows future API requests to be routed through Decentralized Physical Infrastructure Networks (edge nodes).</p>
+                    <h4>Uncapped Data Density</h4>
+                    <p>Hyperbolic space allows us to cram significantly deeper domain logic into a highly constrained 1.58-bit parameter boundary, generating smarter outputs from cheaper hardware.</p>
                 </div>
                 <div class="card">
-                    <h4>Sovereign Capability</h4>
-                    <p>Eliminates dependency on foreign cloud monopolies by enabling advanced AI processing directly on domestic, mid-tier data center hardware.</p>
+                    <h4>Sovereign AI Infrastructure</h4>
+                    <p>Removing the FP16 compute bottleneck allows robust, sovereign AI capabilities to be deployed natively without relying on foreign cloud monopolies or constrained hardware supply chains.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 8: The Ask -->
+        <!-- Slide 6: The Ask -->
         <div class="slide center-slide">
             <h2>The Resource Ask</h2>
             <h3 style="max-width: 800px; margin: 0 auto 2rem auto;">Seeking Incubation Support & Government Compute Credits</h3>
             
             <div class="grid-3" style="text-align: left;">
                 <div class="card" style="background: transparent; border-color: var(--accent);">
-                    <h4 style="color: var(--accent);">Current Burn Rate</h4>
-                    <p style="color: #fff; font-size: 2rem; font-weight: bold; margin: 0.5rem 0;">Lean</p>
-                    <p>Bootstrapped. Pre-revenue ($0 MRR). R&D methodology keeps testing costs virtually zero.</p>
+                    <h4 style="color: var(--accent);">Current Focus</h4>
+                    <p style="color: #fff; font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0;">Distillation Validation</p>
+                    <p>Executing dual-loss knowledge distillation to transfer cognitive routing from FP16 teachers into 1.58-bit ternary frameworks.</p>
                 </div>
                 <div class="card" style="background: transparent; border-color: var(--accent);">
                     <h4 style="color: var(--accent);">Target Milestone</h4>
-                    <p style="color: #fff; font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0;">10 Billion Tokens</p>
-                    <p>Executing the continual pre-training warm-up phase to cross the coherence threshold.</p>
+                    <p style="color: #fff; font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0;">Continual Pre-Training</p>
+                    <p>Securing the pipeline through a multi-billion token warmup phase to cross the absolute coherence threshold for commercial API readiness.</p>
                 </div>
                 <div class="card" style="background: transparent; border-color: var(--accent);">
                     <h4 style="color: var(--accent);">Required Capital</h4>
                     <p style="color: #fff; font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0;">GPU Cluster Access</p>
-                    <p>Seeking compute grants (IndiaAI Mission / academic racks) for a multi-node distributed distillation run.</p>
+                    <p>Seeking compute grants and incubation support for a multi-node distributed training run to finalize the native foundation model.</p>
                 </div>
             </div>
         </div>
